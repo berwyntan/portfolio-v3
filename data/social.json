@@ -1,0 +1,22 @@
+[
+  {
+    "imgsrc": "https://berwyntanv2.vercel.app/assets/linkedin-d449defe.png",
+    "alt": "linkedin profile",
+    "link": "https://www.linkedin.com/in/berwyn-tan"
+  },
+  {
+    "imgsrc": "https://berwyntanv2.vercel.app/assets/github-746a99c7.png",
+    "alt": "github profile",
+    "link": "https://github.com/berwyntan"
+  },
+  {
+    "imgsrc": "https://berwyntanv2.vercel.app/assets/instagram-45383239.png",
+    "alt": "instagram profile",
+    "link": "https://www.instagram.com/ai.avid"
+  },
+  {
+    "imgsrc": "https://berwyntanv2.vercel.app/assets/leetcode-3bd382b0.png",
+    "alt": "leetcode profile",
+    "link": "https://leetcode.com/berwyntan"
+  }
+]

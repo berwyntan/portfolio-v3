@@ -19,7 +19,7 @@ const config = {
     defaultLocale: "en",
   },
   images: {
-    domains: ["berwyntan.vercel.app"],
+    domains: ["berwyntanv2.vercel.app"],
   },
 };
 export default config;
