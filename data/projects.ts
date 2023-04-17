@@ -1,3 +1,16 @@
+export interface projectsType {
+  techStack: string;
+  preview: string;
+  gif: string;
+  header: string,
+  subHeader: string;
+  description: string;
+  appLink: string;
+  githubLink: string;
+  projectSlug: string;
+  language: string;
+}
+
 const projects = [
   {
     techStack:
@@ -8,7 +21,7 @@ const projects = [
     header: "GroupBuy",
     subHeader: "E-commerce",
     description: `Pain point: Groupbuy organizers spend too much time using WhatsApp, Google Forms to manage orders, payment and fulfilment.
-            Proposed solution: A mobile/desktop responsive customer facing ecommerce storefront with admin dashboard to manage listings, orders, payment, fulfilment and collection.
+            Proposed solution: A mobile/desktop responsive customer facing e-commerce storefront with admin dashboard to manage listings, orders, payment, fulfilment and collection.
             App includes integration with WhatsApp to send preset messages with one click, avoiding repetition and saving time.
             Carried out automated testing with Vitest for this project.
             `,
@@ -26,7 +39,7 @@ const projects = [
     subHeader: "Productivity",
     description: `Pain point: I like to see completed todos get checked off and disappearing, but I would like to reuse them so I do not have to type them again.
             Proposed solution: A mobile/desktop responsive app with two lists: todo and completed. Completed items can be repeated by sending them back into todos.
-            Comes with a heatmap like Github for tracking of repeated todos like a mini habit tracker.
+            Includes tracking of repeated todos in the style of Github.
             `,
     appLink: "https://plain-tick-jodhpurs.cyclic.app",
     githubLink: "https://github.com/berwyntan/todolist-cs50",

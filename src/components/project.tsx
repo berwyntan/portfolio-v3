@@ -25,7 +25,7 @@ export const Project = (props: ProjectProps) => {
     <div className="xs:max-w-xl card m-1 mb-5 h-96 w-full border border-gray-400 bg-gray-100 shadow-xl md:ml-2 md:max-w-md lg:max-w-xs">
       <Link href={`/project/${projectSlug}`}>
         <figure className="h-60">
-          <img src={preview} alt="Shoes" />
+          <img src={preview} alt={header} />
         </figure>
         <div className="card-body">
           <h2 className="card-title text-xl font-bold">{header}</h2>
