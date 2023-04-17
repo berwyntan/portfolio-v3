@@ -11,7 +11,7 @@ export const Hero = () => {
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold text-white">Hello there</h1>
           <p className="mb-5 text-gray-50">
-          Welcome to my portfolio page. Besides building full stack projects, I also dabble in AI generated artwork.
+          Welcome to my portfolio page. Besides building full stack web projects, I also create AI generated artwork.
           </p>
           
         </div>

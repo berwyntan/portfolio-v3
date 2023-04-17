@@ -1,16 +1,7 @@
 import type { GetStaticProps } from "next";
-import { PageLayout } from "~/components/layout";
-import { Navbar } from "~/components/navbar";
 
 const ProjectSinglePage = (props: { projectSlug: string }) => {
-  
-  return (
-    <PageLayout>
-      <Navbar />
-      <div>{`ProjectSinglePage: ${props.projectSlug}`}</div>
-    </PageLayout>
-    
-  );
+  return <div>{`ProjectSinglePage: ${props.projectSlug}`}</div>;
 };
 
 export const getStaticProps: GetStaticProps = (context) => {
@@ -29,4 +20,4 @@ export const getStaticPaths = () => {
   };
 };
 
-export default ProjectSinglePage
+export default ProjectSinglePage;
