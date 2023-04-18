@@ -8,10 +8,10 @@ export const Hero = () => {
     >
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content">
-        <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold text-white">Hello there</h1>
+        <div className="max-w-2xl">
+          <h1 className="mb-5 text-5xl font-bold text-white">Hello there, I&apos;m Berwyn.</h1>
           <p className="mb-5 text-gray-50">
-          Welcome to my portfolio page. Besides building full stack web projects, I also create AI generated artwork.
+          Welcome to my portfolio page. I am also interested in AI generated artwork, checkout my Instagram!
           </p>
           
         </div>

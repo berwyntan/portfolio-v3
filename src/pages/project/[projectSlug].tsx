@@ -12,30 +12,34 @@ const ProjectSinglePage = (props: {
     gif,
     header,
     subHeader,
-    description,
+    desc1,
+    desc2,
+    desc3,
     appLink,
     githubLink,
     language,
   } = props?.project;
   return (
-    <div className="p-2">
+    <div className="p-5">
       <h1 className="my-1 text-2xl font-bold">{header}</h1>
-      <h2 className="my-2 text-xl italic">{subHeader}</h2>
+      <h2 className="my-2 italic">{subHeader}</h2>
       <div>
         <img src={gif} alt={header} />
       </div>
-      <p className="my-4 text-lg">{description}</p>
+      <p className="my-2">{desc1}</p>
+      <p className="my-2">{desc2}</p>
+      <p className="my-2">{desc3}</p>
 
       <div className="my-1 flex">
         <p className="mr-1 italic">Language:</p>
         <p className="">{language}</p>
       </div>
 
-      <div className="my-1 flex flex-col md:flex-row">
+      <div className="my-1 flex flex-col">
         <p className="mr-1 italic">Tech stack:</p>
         <p className="">{techStack}</p>
       </div>
-      <div className="flex gap-2">
+      <div className="my-4 flex gap-5">
         <div className="h-10 w-10">
           <Link href={appLink} target="_blank">
             <img

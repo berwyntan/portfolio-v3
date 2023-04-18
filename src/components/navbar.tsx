@@ -25,7 +25,7 @@ const Navbar = () => {
     <div className="navbar bg-gray-100">
       <div className="flex-1">
         <Link href="/">
-          <div className="btn-ghost btn text-xl normal-case font-semibold">Berwyn Tan</div>
+          <div className="btn-ghost btn text-xl normal-case font-semibold">Portfolio</div>
         </Link>
       </div>
       <div className="flex items-start">
