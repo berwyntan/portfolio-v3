@@ -9,7 +9,7 @@ interface ProjectProps {
 
 export const Project = (props: ProjectProps) => {
   const { projectSlug, preview, header, subHeader, language } = props;
-  console.log(props);
+  // console.log(props);
   return (
     // <div className="m-2 my-5 h-56 w-full flex-grow rounded border border-black p-2 md:max-w-xs">
     //   <Link href={`/project/${projectSlug}`}>

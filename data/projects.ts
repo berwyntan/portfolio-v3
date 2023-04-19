@@ -1,4 +1,5 @@
 export interface projectsType {
+  find(arg0: (proj: { projectSlug: string; }) => boolean): projectsType;
   techStack: string;
   preview: string;
   gif: string;

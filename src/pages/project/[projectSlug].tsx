@@ -8,6 +8,11 @@ const ProjectSinglePage = (props: {
   projectSlug: string;
   project: projectsType;
 }) => {
+
+  if (!props.project) return (
+    <div>Loading...</div>
+  )
+  
   const {
     techStack,
     gif,
@@ -21,26 +26,6 @@ const ProjectSinglePage = (props: {
     language,
   } = props?.project;
 
-  // const router = useRouter();
-  // console.log(router.query.projectSlug);
-  // // const projectSlug: string = router.query.projectSlug;
-  // const projectSlug: string = props.projectSlug;
-  // const project = projects?.find(
-  //   (proj) => proj.projectSlug === projectSlug
-  // );
-
-  // const {
-  //   techStack,
-  //   gif,
-  //   header,
-  //   subHeader,
-  //   desc1,
-  //   desc2,
-  //   desc3,
-  //   appLink,
-  //   githubLink,
-  //   language,
-  // } = project;
   return (
     <div className="flex flex-col items-center p-5">
       <div className="mb-3 flex items-end justify-between md:w-10/12">
@@ -94,23 +79,36 @@ const ProjectSinglePage = (props: {
   );
 };
 
-export const getStaticProps: GetStaticProps = (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const projectSlug = context.params?.projectSlug;
+  if (!projectSlug || Array.isArray(projectSlug)) return {
+    notFound: true
+  }
   // to fetch projects json from a DB
-  const project = projects?.find((proj) => proj.projectSlug === projectSlug);
+  const rawData = await fetch(
+    `https://nextjs-course-40339-default-rtdb.asia-southeast1.firebasedatabase.app/projects.json`)
+  
+  if (!rawData) return {
+    notFound: true
+  }
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const data: projectsType = await rawData.json();
+  
+  const project = data?.find((proj: { projectSlug: string; }) => proj.projectSlug === projectSlug);
 
   return {
     props: {
       projectSlug: projectSlug,
       project: project,
     },
+    revalidate: 86400
   };
 };
 
 export const getStaticPaths = () => {
   return {
     paths: [],
-    fallback: true,
+    fallback: "blocking",
   };
 };
 
