@@ -2,17 +2,14 @@ import type { GetStaticProps } from "next";
 import projects from "data/projects";
 import type { projectsType } from "data/projects";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import Image from "next/image";
 
 const ProjectSinglePage = (props: {
   projectSlug: string;
   project: projectsType;
 }) => {
+  if (!props.project || !props.projectSlug) return <div>Loading...</div>;
 
-  if (!props.project) return (
-    <div>Loading...</div>
-  )
-  
   const {
     techStack,
     gif,
@@ -36,17 +33,21 @@ const ProjectSinglePage = (props: {
         <div className="ml-10 flex gap-5">
           <div className="h-8 w-8 border-b-2 border-dotted border-gray-500 p-1">
             <Link href={appLink} target="_blank">
-              <img
+              <Image
                 src="https://berwyntanv2.vercel.app/assets/newTab-600daff5.png"
                 alt="project link"
+                width={100}
+                height={100}
               />
             </Link>
           </div>
           <div className="h-8 w-8 border-b-2 border-dotted border-gray-500 p-1">
             <Link href={githubLink} target="_blank">
-              <img
+              <Image
                 src="https://berwyntanv2.vercel.app/assets/github-746a99c7.png"
                 alt="github link"
+                width={100}
+                height={100}
               />
             </Link>
           </div>
@@ -54,7 +55,7 @@ const ProjectSinglePage = (props: {
       </div>
 
       <div className="flex justify-center">
-        <img src={gif} alt={header} />
+        <Image src={gif} alt={header} width={600} height={600}/>
       </div>
 
       <div className="flex w-10/12 flex-col items-start">
@@ -79,29 +80,23 @@ const ProjectSinglePage = (props: {
   );
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = (context) => {
   const projectSlug = context.params?.projectSlug;
-  if (!projectSlug || Array.isArray(projectSlug)) return {
-    notFound: true
-  }
-  // to fetch projects json from a DB
-  const rawData = await fetch(
-    `https://nextjs-course-40339-default-rtdb.asia-southeast1.firebasedatabase.app/projects.json`)
-  
-  if (!rawData) return {
-    notFound: true
-  }
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const data: projectsType = await rawData.json();
-  
-  const project = data?.find((proj: { projectSlug: string; }) => proj.projectSlug === projectSlug);
+  if (!projectSlug || Array.isArray(projectSlug))
+    return {
+      notFound: true,
+    };
+  // to fetch projects from data/projects.ts
+  const project = projects?.find(
+    (proj: { projectSlug: string }) => proj.projectSlug === projectSlug
+  );
 
   return {
     props: {
       projectSlug: projectSlug,
       project: project,
     },
-    revalidate: 86400
+    revalidate: 86400,
   };
 };
 
