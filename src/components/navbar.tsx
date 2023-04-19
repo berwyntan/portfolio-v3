@@ -22,13 +22,12 @@ const SocialButton = (props: socialButtonType) => {
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-slate-200 rounded-lg">
+    <div className="navbar rounded-lg bg-slate-200">
       <div className="flex-1">
         <Link href="/">
-          <div className="btn-ghost btn text-xl tracking-wider">PORTFOLIO</div>
+          <div className="btn-ghost btn tracking-wider">PROJECTS</div>
         </Link>
-        <div className="btn-ghost btn text-xl tracking-wider">ABOUT</div>
-        <div className="btn-ghost btn text-xl tracking-wider">CV</div>
+        <div className="btn-ghost btn tracking-wider">ABOUT</div>
       </div>
       <div className="flex items-start">
         {socialData.map((data) => {

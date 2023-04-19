@@ -111,7 +111,7 @@ const ProjectSinglePage = (props: {
           <img src={gif} alt={header} />
         </div>
 
-        <div className="flex w-10/12 flex-col items-start">
+        <div className="flex w-11/12 md:w-10/12 flex-col items-start">
           <div className="my-2 mt-3 flex flex-col">
             <p className="mr-1 font-light italic">Language:</p>
             <p className="">{language}</p>
@@ -131,7 +131,7 @@ const ProjectSinglePage = (props: {
         </div>
         <div className="flex items-center justify-around md:w-4/12">
           <PrevButton prevSlug={prevSlug} />
-          <span className="font-light">More Projects</span>
+          <span className="font-light mx-2">More Projects</span>
           <NextButton nextSlug={nextSlug} />
         </div>
       </div>
