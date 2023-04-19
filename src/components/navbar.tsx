@@ -12,7 +12,7 @@ const SocialButton = (props: socialButtonType) => {
   const alt = props.alt;
   const link = props.link;
   return (
-    <button className="btn-ghost btn-square btn-sm mx-2">
+    <button className="btn-ghost btn-square btn-xs mx-2">
       <Link href={link} target="_blank">
         <Image src={imgsrc} alt={alt} width={50} height={50} />
       </Link>
@@ -22,11 +22,13 @@ const SocialButton = (props: socialButtonType) => {
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-gray-100">
+    <div className="navbar bg-slate-200 rounded-lg">
       <div className="flex-1">
         <Link href="/">
-          <div className="btn-ghost btn text-xl normal-case font-semibold">Portfolio</div>
+          <div className="btn-ghost btn text-xl tracking-wider">PORTFOLIO</div>
         </Link>
+        <div className="btn-ghost btn text-xl tracking-wider">ABOUT</div>
+        <div className="btn-ghost btn text-xl tracking-wider">CV</div>
       </div>
       <div className="flex items-start">
         {socialData.map((data) => {

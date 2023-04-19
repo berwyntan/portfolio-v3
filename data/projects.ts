@@ -12,6 +12,8 @@ export interface projectsType {
   githubLink: string;
   projectSlug: string;
   language: string;
+  prevSlug: string;
+  nextSlug: string;
 }
 
 const projects = [
@@ -30,6 +32,8 @@ const projects = [
     githubLink: "https://github.com/berwyntan/t3-tutorial",
     projectSlug: "chirp",
     language: "Typescript",
+    prevSlug: "simplelogin",
+    nextSlug: "",
   },
   {
     techStack:
@@ -46,6 +50,8 @@ const projects = [
     githubLink: "https://github.com/berwyntan/auth-java-client",
     projectSlug: "simplelogin",
     language: "Javascript, Java",
+    prevSlug: "calendar",
+    nextSlug: "chirp",
   },
   {
     techStack:
@@ -62,6 +68,8 @@ const projects = [
     githubLink: "https://github.com/berwyntan/calendar",
     projectSlug: "calendar",
     language: "Typescript",
+    prevSlug: "groupbuy",
+    nextSlug: "simplelogin",
   },
   {
     techStack:
@@ -82,6 +90,8 @@ const projects = [
     githubLink: "https://github.com/berwyntan/group-buy",
     projectSlug: "groupbuy",
     language: "Javascript",
+    prevSlug: "todolistcs50",
+    nextSlug: "calendar",
   },
   {
     techStack: "ReactJS, TailwindCSS, Zustand | NodeJS, ExpressJS, PostgreSQL, Sequelize, JWT",
@@ -97,6 +107,8 @@ const projects = [
     githubLink: "https://github.com/berwyntan/todolist-cs50",
     projectSlug: "todolistcs50",
     language: "Javascript",
+    prevSlug: "techbar",
+    nextSlug: "groupbuy",
   },
   {
     techStack: "ReactJS, Bootstrap | NodeJS, ExpressJS, MongoDB, Mongoose",
@@ -114,6 +126,8 @@ const projects = [
     githubLink: "https://github.com/berwyntan/techbar",
     projectSlug: "techbar",
     language: "Javascript",
+    prevSlug: "astronomyfullstack",
+    nextSlug: "todolistcs50",
   },
   {
     techStack: "ReactJS, TailwindCSS, Cypress | NodeJS, ExpressJS, MongoDB, Mongoose",
@@ -129,6 +143,8 @@ const projects = [
     githubLink: "https://github.com/berwyntan/astronomy-app-2",
     projectSlug: "astronomyfullstack",
     language: "Javascript",
+    prevSlug: "astronomy",
+    nextSlug: "techbar",
   },
   {
     techStack: "ReactJS, TailwindCSS, Airtable",
@@ -145,6 +161,8 @@ const projects = [
     githubLink: "https://github.com/berwyntan/astronomy-photo-app",
     projectSlug: "astronomy",
     language: "Javascript",
+    prevSlug: "candycrush",
+    nextSlug: "astronomyfullstack",
   },
   {
     techStack: "HTML, CSS, jQuery",
@@ -160,6 +178,8 @@ const projects = [
     githubLink: "https://github.com/berwyntan/candycrushgame",
     projectSlug: "candycrush",
     language: "Javascript",
+    prevSlug: "portfoliov2",
+    nextSlug: "astronomy",
   },
   {
     techStack: "ReactJS, TailwindCSS",
@@ -175,6 +195,8 @@ const projects = [
     githubLink: "https://github.com/berwyntan/portfolio-v2",
     projectSlug: "portfoliov2",
     language: "Javascript",
+    prevSlug: "portfoliov1",
+    nextSlug: "candycrush",
   },
   {
     techStack: "ReactJS, MaterialUI",
@@ -190,6 +212,8 @@ const projects = [
     githubLink: "https://github.com/berwyntan/portfolio",
     projectSlug: "portfoliov1",
     language: "Javascript",
+    prevSlug: "",
+    nextSlug: "portfoliov2",
   },
 ];
 

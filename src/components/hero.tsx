@@ -11,7 +11,7 @@ export const Hero = () => {
         <div className="max-w-2xl">
           <h1 className="mb-5 text-5xl font-bold text-white">Hello there, I&apos;m Berwyn.</h1>
           <p className="mb-5 text-gray-50">
-          Welcome to my portfolio page. I am also interested in AI generated artwork, check out my Instagram!
+          I am a software engineer. Welcome to my portfolio page. 
           </p>
           
         </div>

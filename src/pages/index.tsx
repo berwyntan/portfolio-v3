@@ -20,7 +20,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Berwyn Tan: Portfolio</title>
+        <title>Berwyn&apos;s Portfolio</title>
         <meta
           name="description"
           content="Portfolio of Berwyn Tan: Software Engineer"
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
 
       <Hero />
 
-      <div className="flex-start mt-8 flex flex-col p-1 md:flex-row md:flex-wrap">
+      <div className="flex-start mt-8 flex flex-col p-1 md:flex-row md:flex-wrap md:justify-center">
         {projectCards}
       </div>
     </>
