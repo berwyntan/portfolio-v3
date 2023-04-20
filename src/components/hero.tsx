@@ -12,8 +12,8 @@ export const Hero = () => {
               Hello there, I&apos;m Berwyn.
             </h1>
             <p className="mb-5 text-gray-50">
-              Welcome to my portfolio page. I create AI generated art and web
-              applications.
+              Welcome to my portfolio page. I create web
+              applications and AI generated art.
             </p>
           </div>
         </div>

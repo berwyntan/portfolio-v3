@@ -1,5 +1,6 @@
 import { type AppType } from "next/dist/shared/lib/utils";
 import Head from "next/head";
+import Footer from "~/components/footer";
 import { PageLayout } from "~/components/layout";
 import Navbar from "~/components/navbar";
 
@@ -19,6 +20,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       <PageLayout>
         <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </PageLayout>
     </>
   );

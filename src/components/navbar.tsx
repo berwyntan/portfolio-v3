@@ -25,9 +25,11 @@ const Navbar = () => {
     <div className="navbar rounded-lg bg-slate-200">
       <div className="flex-1">
         <Link href="/">
-          <div className="btn-ghost btn tracking-wider">PROJECTS</div>
+          <div className="btn-ghost btn">PROJECTS</div>
         </Link>
-        <div className="btn-ghost btn tracking-wider">ABOUT</div>
+        <Link href="/about">
+          <div className="btn-ghost btn">ABOUT</div>
+        </Link>
       </div>
       <div className="flex items-start">
         {socialData.map((data) => {
