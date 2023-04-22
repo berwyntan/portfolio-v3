@@ -19,6 +19,24 @@ export interface projectsType {
 const projects = [
   {
     techStack:
+      `NextJS`,
+    preview:
+      "https://res.cloudinary.com/dkilrhnk7/image/upload/v1682128734/promptgen1_o1zekx.png",
+    gif: "https://res.cloudinary.com/dkilrhnk7/image/upload/v1682127649/promptgen2demo_sglngi.gif",
+    header: "Simple AI Art Prompt Generator",
+    subHeader: "AI",
+    desc1: `A tool to generate detailed prompts for programs like Midjourney, Stable Diffusion using only a subject.`,
+    desc2: `Generate an idea that you can modify and iterate on.`,
+    desc3: `Built on top of the OpenAI nodeJS quickstart project.`,
+    appLink: "https://basic-aiart-prompt-generator.vercel.app/",
+    githubLink: "https://github.com/berwyntan/basic-aiart-prompt-generator",
+    projectSlug: "simpleaiartpromptgen",
+    language: "Javascript",
+    prevSlug: "chirp",
+    nextSlug: "",
+  },
+  {
+    techStack:
       `NextJS, React Query, TailwindCSS, tRPC, mySQL, Prisma`,
     preview:
       "https://res.cloudinary.com/dkilrhnk7/image/upload/v1681809783/chirp_jikzws.png",
@@ -33,7 +51,7 @@ const projects = [
     projectSlug: "chirp",
     language: "Typescript",
     prevSlug: "simplelogin",
-    nextSlug: "",
+    nextSlug: "simpleaiartpromptgen",
   },
   {
     techStack:
