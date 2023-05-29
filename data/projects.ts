@@ -19,6 +19,24 @@ export interface projectsType {
 const projects = [
   {
     techStack:
+      `React`,
+    preview:
+      "https://res.cloudinary.com/dkilrhnk7/image/upload/v1685355320/learny_la5nj2.png",
+    gif: "https://res.cloudinary.com/dkilrhnk7/image/upload/v1685355327/learnydemo_necmfp.gif",
+    header: "Learny Matching Tool",
+    subHeader: "Volunteer - Better.sg",
+    desc1: `An app that matches students looking for tutors, based on criteria like education level, subject, gender preference etc.`,
+    desc2: `App loads tutor/tutee data and then suggests 5 tutors for a tutee.`,
+    desc3: `Contributed to the matching algorithm.`,
+    appLink: "https://learny-matching-tool.vercel.app",
+    githubLink: "https://github.com/antoponselvan/Learny_Matching_Tool",
+    projectSlug: "learnymatchingtool",
+    language: "Typescript",
+    prevSlug: "simpleaiartpromptgen",
+    nextSlug: "",
+  },
+  {
+    techStack:
       `NextJS`,
     preview:
       "https://res.cloudinary.com/dkilrhnk7/image/upload/v1682128734/promptgen1_o1zekx.png",
@@ -33,7 +51,7 @@ const projects = [
     projectSlug: "simpleaiartpromptgen",
     language: "Javascript",
     prevSlug: "chirp",
-    nextSlug: "",
+    nextSlug: "learnymatchingtool",
   },
   {
     techStack:
